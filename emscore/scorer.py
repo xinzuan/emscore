@@ -1,5 +1,5 @@
 import torch
-import clip
+from clip.clip import *
 from PIL import Image
 import json
 import cv2
@@ -40,9 +40,9 @@ class EMScorer:
                         the *best* score among all references.
         """
         
-        model, preprocess = clip.load("ViT-B/32", device=self.device)
+        model, preprocess = load("ViT-B/32", device=self.device)
         self._model = model
-        self._tokenizer = clip.tokenize
+        self._tokenizer = tokenize
         self._image_preprocess = preprocess
 
         ref_group_boundaries = None

@@ -1,4 +1,4 @@
-from scorer import EMScorer
+from emscore.scorer import EMScorer
 
 
 if __name__ == '__main__':
